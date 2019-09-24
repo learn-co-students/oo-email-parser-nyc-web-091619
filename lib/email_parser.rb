@@ -5,16 +5,15 @@
 
 class EmailAddressParser
 
-    attr_reader :email
+
 
     def initialize(email)
         @email=email
     end
 
     def parse
-        @email.split(/[,\s]+/).uniq
+        @email.split(/[,\s]+/).uniq     # reference for split search string https://stackoverflow.com/questions/43358452/ruby-split-string-made-up-of-emails-at-space-or-comma
+                                        # regex (regular expression) reference page https://www.regular-expressions.info/charclass.html
+
     end
-
-
-
-end
+end     # end of EmailAddressParser
